@@ -38,8 +38,9 @@ function no() {
 
 function yes() {
   const question = document.getElementById("question");
-  question.innerText = "Ben de özledim aq yalan mı söyleyelim yani";
+  question.innerText = "Ben de özledim aq yalan mı söyleyelim yani  ";
 
   document.querySelector(".buttons").style.display = "none";
 }
+
 
