@@ -1,0 +1,104 @@
+body {
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+}
+
+/* ANA EKRAN */
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  width: 90%;
+  max-width: 350px;
+}
+
+h1 {
+  color: #333;
+}
+
+p {
+  color: #555;
+  font-size: 18px;
+  min-height: 60px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background: #a6c1ee;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #8fa8e0;
+}
+
+/* FINAL EKRAN */
+.final-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.final-screen h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.final-screen img {
+  width: 220px;
+  max-width: 80%;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.final-screen p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* EVET / HAYIR BUTONLARI */
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.buttons button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.buttons button:first-child {
+  background: #4CAF50;
+  color: white;
+}
+
+.buttons button:last-child {
+  background: #f44336;
+  color: white;
+}
