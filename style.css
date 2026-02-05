@@ -102,3 +102,9 @@ button:hover {
   background: #f44336;
   color: white;
 }
+
+/* HAYIR BUTONU KAÇMA EFEKTİ */
+#noBtn {
+  position: relative;
+  transition: transform 0.25s ease;
+}
