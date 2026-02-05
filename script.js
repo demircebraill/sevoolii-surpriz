@@ -1,11 +1,11 @@
 let step = 0;
 
 const messages = [
-  "Merhaba Şevoolii 😊",
-  "Baba uzaktan okuyorsun ama ben bunu seni düşünerek yaptım 💭",
+  "Merhaba Şevvooliii babbba",
+  "Bunu uzaktan okuyorsun ama ben bunu düşünerek yaptım 💭",
   "Bazen küçük şeyler büyük gülümsemeler yaratır",
   "Sen de öyle birisin 🌼",
-  "Hazırsan son bir şey var..."
+  "Hazırsan bir şey var daha var..."
 ];
 
 function nextMessage() {
@@ -18,29 +18,43 @@ function nextMessage() {
   }
 }
 
-/* EVET / HAYIR MANTIĞI */
+/* EVET / HAYIR OYUNU */
 let noCount = 0;
 
 function no() {
   const question = document.getElementById("question");
+  const noBtn = document.getElementById("noBtn");
 
-  const noMessages = [
-    "Emin misin? 🤔",
-    "Bir daha düşün bence 😌",
-    "Bak kalbim kırılıyor 💔",
-    "Hadi babbaaa biraz bile özlemedin mi?",
-    "Son kararın mı la harbiden?"
-  ];
-
-  question.innerText = noMessages[noCount % noMessages.length];
   noCount++;
+
+  // İlk 3 tık normal
+  if (noCount <= 3) {
+    const texts = [
+      "Emin misin? 🤔",
+      "Bi daha düşün la😌",
+      "Bak kalbim kırılıyor hee 💔"
+    ];
+    question.innerText = texts[noCount - 1];
+  }
+  // Sonraki tıklarda buton kaçar
+  else if (noCount <= 7) {
+    question.innerText = "Hadi ama… yakalayabilirsen 😄";
+
+    const x = Math.floor(Math.random() * 120) - 60;
+    const y = Math.floor(Math.random() * 120) - 60;
+
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
+  }
+  // En sonunda tamamen kilitlenir
+  else {
+    question.innerText = "Tamam tamam… başka şansın yok 😌";
+    noBtn.style.display = "none";
+  }
 }
 
 function yes() {
   const question = document.getElementById("question");
-  question.innerText = "Ben de özledim aq yalan mı söyleyelim yani  ";
+  question.innerText = "Ben de özledim aq yalan mı söyleyelim💙";
 
   document.querySelector(".buttons").style.display = "none";
 }
-
-
